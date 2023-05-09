@@ -86,7 +86,7 @@ int main()
    int arr[N];
    cin>>N;
    for(int i=0;i<N;i++){
-      cout<<"enter "<<i+1<<"entry: ";
+      cout<<"enter "<<i+1<<" entry: ";
       int x;
       cin>>x;
       arr[i]=x;
