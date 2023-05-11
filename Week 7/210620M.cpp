@@ -93,6 +93,7 @@ int main() {
   while (operation != -1) {
     switch(operation) {
       case 1: // insert
+        bool a = true;
         cin >> operand;
         root = insertNode(root, operand);
         cin >> operation;
