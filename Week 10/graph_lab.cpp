@@ -4,11 +4,11 @@
 using namespace std;
 
 struct Node{
-    int label;
-    list <int> neighbours;
     // A node will 2 entities
     //1. data type int called label
     //2. a int type list called neighbours
+    int label;
+    list <int> neighbours;
 
 };
 
@@ -35,9 +35,13 @@ struct Graph{
     void print(){
         //lets iterate through each node and print its neighbours
         for(int x = 0;x<n;x++){
+
+            //printing the starting node
             cout<<nodes[x].label<<"->";
             bool first = true;
             for(int y:nodes[x].neighbours){
+
+                //printing all the neighbouring nodes
                 if(first){
                     cout<<" "<<nodes[y].label;
                     first = false;
