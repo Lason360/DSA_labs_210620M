@@ -25,6 +25,7 @@ struct Graph{
     }
 
     void addedge(int u, int v){
+        //(u-1), (v-1) is used because the list index start from 0
         //select node u and push v into u's neighbour
         nodes[u-1].neighbours.push_back(v-1);
 
