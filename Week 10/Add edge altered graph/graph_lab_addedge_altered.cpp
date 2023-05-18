@@ -27,6 +27,7 @@ struct Graph{
     void addedge(int u, int v){
         //edge is directed as u -> v
         //select node u and push v into u's neighbour
+        //u-1 and v-1 are the indices as starting index is 0
         nodes[u-1].neighbours.push_back(v-1);
 
     }
