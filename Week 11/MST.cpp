@@ -25,7 +25,6 @@ void printMST(int parent[], int map[6][6]){
 
 void primMST(int map[6][6])
 {
-
 	int parent[6];
 	int key[6];
 	bool mstSet[6];
@@ -33,10 +32,16 @@ void primMST(int map[6][6])
 		key[i] = INT_MAX, mstSet[i] = false;
 	key[0] = 0;
 	parent[0] = -1;
-	for (int count = 0; count < 5; count++) {
+	
+    //adding vertices to MST
+    for (int count = 0; count < 5; count++) {
 		int u = minKey(key, mstSet);
-		mstSet[u] = true;
+		//u added to partition of the mst
+        mstSet[u] = true;
+
+        
 		for (int v = 0; v < 6; v++)	
+            //if u-v edge exists, v not in MST partition, distance to v is greater than u-v weight
 			if (map[u][v] && mstSet[v] == false && map[u][v] < key[v]){
 				parent[v] = u;
                 key[v] = map[u][v];
